@@ -23,7 +23,7 @@ const Navbar = () => {
     <NavbarContainer>
       <BrandContainer>
         <Link to='/'>
-          <BrandLinkItem>GOLDEN BIZ ALLIANCE</BrandLinkItem>
+          <BrandLinkItem>SMART ALLIANCE</BrandLinkItem>
         </Link>
       </BrandContainer>
       <MenuContainer>

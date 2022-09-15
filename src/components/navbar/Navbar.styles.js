@@ -11,6 +11,7 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  padding: 0 10px;
 `
 
 export const MobileNavbarLinks = styled.div`
