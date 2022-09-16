@@ -35,7 +35,7 @@ export const Hero = styled.div`
   align-items: center;
   object-fit: contain;
   justify-content: center;
-  background-color: navy;
+  background-color: ${colors.navy};
   border-radius: 5px;
   opacity: 0.6;
   z-index: -1;

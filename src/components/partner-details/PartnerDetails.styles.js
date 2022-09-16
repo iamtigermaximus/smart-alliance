@@ -28,7 +28,7 @@ export const PartnerDetailsContainer = styled.div`
 export const CardContainer = styled.div`
   height: 350px;
   width: 300px;
-  background-color: #fffafa;
+  background-color: ${colors.offWhite};
   border-radius: 5px;
   flex-direction: column;
   padding: 3px;
@@ -38,7 +38,7 @@ export const CardContainer = styled.div`
   align-items: center;
 
   &&:hover {
-    border: 2px solid orange;
+    border: 2px solid ${colors.orange};
   }
 
   @media (min-width: ${bp.sm}) {
@@ -53,7 +53,7 @@ export const CardContainer = styled.div`
 export const BlankForImage = styled.div`
   height: 220px;
   width: 100%;
-  background-color: orange;
+  background-color: ${colors.orange};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -5,7 +5,7 @@ import colors from '../../utils/colors'
 export const Container = styled.div`
   width: 100vw;
   height: 100%;
-  background: #110934;
+  background: ${colors.darkBlue};
 `
 
 export const Video = styled.video`
@@ -48,7 +48,7 @@ export const CardsWrapper = styled.div`
 export const PartnerCard = styled.div`
   height: 350px;
   width: 100%;
-  background-color: #fffafa;
+  background-color: ${colors.offWhite};
   border-radius: 5px;
   flex-direction: column;
   padding: 3px;
@@ -71,7 +71,7 @@ export const PartnerCard = styled.div`
 export const BlankForImage = styled.div`
   height: 220px;
   width: 100%;
-  background-color: orange;
+  background-color: ${colors.orange};
 
   @media (min-width: ${bp.lg}) {
     height: 300px;
