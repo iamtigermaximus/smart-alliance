@@ -102,7 +102,7 @@ export const InfoCardContainer = styled.div`
   }
 `
 
-export const InfoCard = styled.h1`
+export const InfoCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

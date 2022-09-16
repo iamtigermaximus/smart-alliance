@@ -15,7 +15,7 @@ import { BlankForImage, CardBodyContainer } from '../card/Card.styles'
 import Avatar from 'react-avatar'
 
 const PartnerDetails = () => {
-  const { id } = useParams()
+  const { id, name } = useParams()
   const [partnerDetails, setPartnerDetails] = useState([])
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const PartnerDetails = () => {
       <CardContainer>
         <BlankForImage>
           <Avatar
-            name={partnerDetails.name}
+            name={name}
             maxInitials={1}
             size='200'
             textSizeRatio={4}
