@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
 import colors from '../../utils/colors'
-import BgBlue from '../../assets/images/bg-blue.jpg'
 
 export const Video = styled.video`
   object-fit: cover;
