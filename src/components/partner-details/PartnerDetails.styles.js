@@ -2,14 +2,6 @@ import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
 import colors from '../../utils/colors'
 
-export const Video = styled.video`
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
-`
-
 export const PartnerDetailsContainer = styled.div`
   height: 100vh;
   width: 100vw;
@@ -17,8 +9,7 @@ export const PartnerDetailsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   object-fit: contain;
-  justify-content: center;
-  padding: 30px;
+  padding: 100px;
   background: rgb(2, 1, 41);
   background: linear-gradient(
     90deg,
@@ -28,46 +19,84 @@ export const PartnerDetailsContainer = styled.div`
     rgba(2, 0, 36, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
-`
-export const HeroTitle = styled.h1`
-  color: ${colors.offWhite};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 700;
-  z-index: 1;
-
-  @media (min-width: ${bp.sm}) {
-    font-size: 30px;
-  }
-
-  @media (min-width: ${bp.lg}) {
-    font-size: 60px;
-    margin: 50px;
-  }
-`
-export const Hero = styled.div`
-  height: 250px;
-  width: 100%;
-  margin: 30px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  object-fit: contain;
-  justify-content: center;
-  background-color: navy;
-  border-radius: 5px;
-  opacity: 0.6;
-  z-index: -1;
 
   @media (min-width: ${bp.md}) {
-    height: 400px;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
   }
 `
-export const Name = styled.h1`
-  font-size: 30px;
-  color: ${colors.offWhite};
+export const CardContainer = styled.div`
+  height: 350px;
+  width: 300px;
+  background-color: #fffafa;
+  border-radius: 5px;
+  flex-direction: column;
+  padding: 3px;
+  margin: 20px;
+  color: ${colors.navy};
+  justify-content: center;
+  align-items: center;
+
+  &&:hover {
+    border: 2px solid orange;
+  }
+
+  @media (min-width: ${bp.sm}) {
+    width: 350px;
+    margin: 10px;
+  }
+
+  @media (min-width: ${bp.md}) {
+    height: 450px;
+  }
+`
+export const BlankForImage = styled.div`
+  height: 220px;
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: ${bp.lg}) {
+    height: 300px;
+  }
+`
+
+export const CardBodyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+`
+export const PartnerName = styled.h1`
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+`
+export const PartnerCompany = styled.h1`
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+`
+
+export const InfoCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-color: center;
+  align-items: center;
+  height: 350px;
+  width: 300px;
+  background-color: #fffafa;
+  padding: 10px;
+
+  @media (min-width: ${bp.sm}) {
+    width: 350px;
+    margin: 10px;
+  }
+
+  @media (min-width: ${bp.md}) {
+    height: 450px;
+  }
 `

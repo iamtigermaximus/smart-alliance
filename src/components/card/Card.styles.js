@@ -33,6 +33,9 @@ export const BlankForImage = styled.div`
   height: 220px;
   width: 100%;
   background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: ${bp.lg}) {
     height: 300px;
@@ -59,3 +62,12 @@ export const PartnerCompany = styled.h1`
 export const PartnerInfoLink = styled(Link)`
   text-decoration: none;
 `
+
+export const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+`
+export const InfoCardContainer = styled.div``
