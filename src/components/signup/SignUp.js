@@ -1,7 +1,12 @@
 import React from 'react'
+import { Container, Title } from './SignUp.styles'
 
 const SignUp = () => {
-  return <div>SignUp</div>
+  return (
+    <Container>
+      <Title>SignUp</Title>
+    </Container>
+  )
 }
 
 export default SignUp
