@@ -28,20 +28,21 @@ const Partners = () => {
         <HeadingTitle>Meet our partners</HeadingTitle>
       </HeadingContainer>
       <CardsWrapper>
-        {partners.map((partner) => (
-          <Card
-            id={partner.id}
-            name={partner.name}
-            email={partner.email}
-            addressStreet={partner.address.street}
-            addressSuite={partner.address.suite}
-            addressCity={partner.address.city}
-            addressZipcode={partner.address.zipcode}
-            companyName={partner.company.name}
-            companyWebsite={partner.website}
-            companyPhone={partner.phone}
-          />
-        ))}
+        {partners &&
+          partners.map((partner) => (
+            <Card
+              id={partner.id}
+              name={partner.name}
+              email={partner.email}
+              addressStreet={partner.address.street}
+              addressSuite={partner.address.suite}
+              addressCity={partner.address.city}
+              addressZipcode={partner.address.zipcode}
+              companyName={partner.company.name}
+              companyWebsite={partner.website}
+              companyPhone={partner.phone}
+            />
+          ))}
       </CardsWrapper>
     </Container>
   )

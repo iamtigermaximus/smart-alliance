@@ -15,45 +15,49 @@ import { BlankForImage, CardBodyContainer } from '../card/Card.styles'
 import Avatar from 'react-avatar'
 
 const PartnerDetails = () => {
-  const { id, name } = useParams()
-  const [partnerDetails, setPartnerDetails] = useState([])
+  const params = useParams()
+  const [partner, setPartner] = useState()
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((response) => setPartnerDetails(response.data))
+      .get(`https://jsonplaceholder.typicode.com/users/${params.id}`)
+      .then((response) => setPartner(response.data))
       .catch((error) => console.log(error))
-  }, [id])
-  console.log('partner!!!!', partnerDetails)
+  }, [params.id])
+  console.log('partner!!!!', params)
   return (
-    <PartnerDetailsContainer key={id}>
-      <CardContainer>
-        <BlankForImage>
-          <Avatar
-            name={name}
-            maxInitials={1}
-            size='200'
-            textSizeRatio={4}
-            round='100px'
-          />
-        </BlankForImage>
-        <CardBodyContainer>
-          <PartnerName>{partnerDetails.name}</PartnerName>
-          <PartnerCompany>{partnerDetails.email}</PartnerCompany>
-        </CardBodyContainer>
-      </CardContainer>
-      <InfoCardContainer>
-        <InfoCard>
-          <CompanyName>{partnerDetails.company.name}</CompanyName>
-          <Info>{partnerDetails.address.suite}</Info>
-          <Info>{partnerDetails.address.street}</Info>
-          <Info>{partnerDetails.address.zipcode}</Info>
-          <Info>{partnerDetails.address.city}</Info>
-          <Info>Call: {partnerDetails.phone}</Info>
-          <Info>Visit: {partnerDetails.website}</Info>
-        </InfoCard>
-      </InfoCardContainer>
-    </PartnerDetailsContainer>
+    <>
+      {partner && (
+        <PartnerDetailsContainer>
+          <CardContainer key={partner.id}>
+            <BlankForImage>
+              <Avatar
+                name={partner.name}
+                maxInitials={1}
+                size='200'
+                textSizeRatio={4}
+                round='100px'
+              />
+            </BlankForImage>
+            <CardBodyContainer>
+              <PartnerName>{partner.name}</PartnerName>
+              <PartnerCompany>{partner.email}</PartnerCompany>
+            </CardBodyContainer>
+          </CardContainer>
+          <InfoCardContainer>
+            <InfoCard>
+              <CompanyName>{partner.company.name}</CompanyName>
+              <Info>{partner.address.suite}</Info>
+              <Info>{partner.address.street}</Info>
+              <Info>{partner.address.zipcode}</Info>
+              <Info>{partner.address.city}</Info>
+              <Info>Call: {partner.phone}</Info>
+              <Info>Visit: {partner.website}</Info>
+            </InfoCard>
+          </InfoCardContainer>
+        </PartnerDetailsContainer>
+      )}
+    </>
   )
 }
 
