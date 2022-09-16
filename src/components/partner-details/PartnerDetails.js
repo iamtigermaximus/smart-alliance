@@ -6,7 +6,10 @@ import {
   PartnerName,
   PartnerCompany,
   InfoCardContainer,
+  InfoCard,
   CardContainer,
+  CompanyName,
+  Info,
 } from './PartnerDetails.styles'
 import { BlankForImage, CardBodyContainer } from '../card/Card.styles'
 import Avatar from 'react-avatar'
@@ -40,7 +43,15 @@ const PartnerDetails = () => {
         </CardBodyContainer>
       </CardContainer>
       <InfoCardContainer>
-        <h1>Hello</h1>
+        <InfoCard>
+          <CompanyName>{partnerDetails.company.name}</CompanyName>
+          <Info>{partnerDetails.address.suite}</Info>
+          <Info>{partnerDetails.address.street}</Info>
+          <Info>{partnerDetails.address.zipcode}</Info>
+          <Info>{partnerDetails.address.city}</Info>
+          <Info>Call: {partnerDetails.phone}</Info>
+          <Info>Visit: {partnerDetails.website}</Info>
+        </InfoCard>
       </InfoCardContainer>
     </PartnerDetailsContainer>
   )

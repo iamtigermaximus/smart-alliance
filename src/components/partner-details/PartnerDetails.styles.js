@@ -88,7 +88,8 @@ export const InfoCardContainer = styled.div`
   align-items: center;
   height: 350px;
   width: 300px;
-  background-color: #fffafa;
+  color: ${colors.navy};
+  background: ${colors.offWhite};
   padding: 10px;
 
   @media (min-width: ${bp.sm}) {
@@ -99,4 +100,21 @@ export const InfoCardContainer = styled.div`
   @media (min-width: ${bp.md}) {
     height: 450px;
   }
+`
+
+export const InfoCard = styled.h1`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`
+export const CompanyName = styled.h1`
+  font-size: 25px;
+  font-weight: 700;
+`
+export const Info = styled.h1`
+  font-size: 20px;
+  font-weight: 700;
+  padding: 3px;
 `
