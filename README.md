@@ -4,7 +4,7 @@
 
 ## Built with:
 
--ReactJS
+- ReactJS
 - React Hooks
 - Styled Components
 - Axios
