@@ -5,6 +5,7 @@ import {
   CardBodyContainer,
   PartnerName,
   PartnerCompany,
+  PartnerInfoLink,
 } from './Card.styles'
 import { CardButton } from '../button/Button.styles'
 
@@ -21,14 +22,16 @@ const Card = ({
 }) => {
   return (
     <>
-      <CardContainer key={id}>
-        <BlankForImage />
-        <CardBodyContainer>
-          <PartnerName>{name}</PartnerName>
-          <PartnerCompany>{companyName}</PartnerCompany>
-          <CardButton>More info</CardButton>
-        </CardBodyContainer>
-      </CardContainer>
+      <PartnerInfoLink to={`/partner-info/${id}`}>
+        <CardContainer key={id}>
+          <BlankForImage />
+          <CardBodyContainer>
+            <PartnerName>{name}</PartnerName>
+            <PartnerCompany>{companyName}</PartnerCompany>
+            <CardButton>More info</CardButton>
+          </CardBodyContainer>
+        </CardContainer>
+      </PartnerInfoLink>
     </>
   )
 }
