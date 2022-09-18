@@ -37,10 +37,6 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  &&:hover {
-    border: 2px solid ${colors.orange};
-  }
-
   @media (min-width: ${bp.sm}) {
     width: 350px;
     margin: 10px;
