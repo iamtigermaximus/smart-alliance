@@ -3,13 +3,14 @@ import { breakpoints as bp } from '../../utils/layout'
 import colors from '../../utils/colors'
 
 export const PartnerDetailsContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   object-fit: contain;
-  padding: 15vh;
+  padding-top: 15vh;
+  padding-bottom: 100px;
+
   background: rgb(2, 1, 41);
   background: linear-gradient(
     90deg,
@@ -21,9 +22,7 @@ export const PartnerDetailsContainer = styled.div`
   );
 
   @media (min-width: ${bp.md}) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    height: 100vh;
   }
 `
 export const CardContainer = styled.div`
@@ -79,15 +78,16 @@ export const PartnerCompany = styled.h1`
 `
 
 export const InfoCardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-color: center;
-  align-items: center;
   height: 350px;
   width: 300px;
+  background-color: ${colors.offWhite};
+  border-radius: 5px;
+  flex-direction: column;
+  padding: 3px;
+  margin: 20px;
   color: ${colors.navy};
-  background: ${colors.offWhite};
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: ${bp.sm}) {
     width: 350px;
@@ -114,4 +114,31 @@ export const Info = styled.h1`
   font-size: 20px;
   font-weight: 700;
   padding: 3px;
+`
+
+export const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${bp.md}) {
+    flex-direction: row;
+  }
+`
+
+export const BackContainer = styled.div`
+  width: 100%;
+  padding: 20px;
+`
+export const BackButton = styled.h1`
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 3px;
+  color: ${colors.offWhite};
+
+  &:hover {
+    cursor: pointer;
+  }
 `
