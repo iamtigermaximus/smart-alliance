@@ -9,7 +9,7 @@ export const PartnerDetailsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   object-fit: contain;
-  padding: 100px;
+  padding: 15vh;
   background: rgb(2, 1, 41);
   background: linear-gradient(
     90deg,
@@ -23,6 +23,7 @@ export const PartnerDetailsContainer = styled.div`
   @media (min-width: ${bp.md}) {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
   }
 `
 export const CardContainer = styled.div`

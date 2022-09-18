@@ -52,7 +52,12 @@ const PartnerDetails = () => {
               <Info>{partner.address.zipcode}</Info>
               <Info>{partner.address.city}</Info>
               <Info>Call: {partner.phone}</Info>
-              <Info>Visit: {partner.website}</Info>
+              <Info>
+                Visit:
+                <a href='https://github.com/iamtigermaximus/smart-alliance'>
+                  {partner.website}
+                </a>
+              </Info>
             </InfoCard>
           </InfoCardContainer>
         </PartnerDetailsContainer>
